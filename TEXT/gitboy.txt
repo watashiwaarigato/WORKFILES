@@ -1,0 +1,60 @@
+https://tci-dm.backlog.jp
+IDÅFkevin-ralph.iglesias
+PWÅFpassword123!
+
+CONFIGURATION
+git config --global user.name ""
+git config --global user.email ""
+
+
+CLONE
+git init
+git remote add origin ""
+git pull
+
+STATUS AND PUSH
+git status
+git add .
+git status
+git commit -m ""
+git log
+$ git push
+
+
+CHANGE/MOVE FILES
+git ls-files
+git mv git_exercise_files/emo.txt git_exercise_files/emonew.txt
+$ git add .
+$ git commit -am "temporary change"
+$ git push origin master
+
+DISCARD CHANGES
+git stash              Discard all local changes, but save them for possible re-use later
+git checkout -- <file> Discarding local changes (permanently) to a file
+git reset --hard       Discard all local changes to all files permanently
+
+
+CREATE/SWTICH BRANCH
+$ git checkout -b [name_of_your_new_branch]
+$ git checkout [name_of_your_new_branch]
+$ git push origin [name_of_your_new_branch]
+
+
+
+
+
+
+
+
+
+git init 			- Initialize a repository
+git status                      - Check all modified files 
+git add . 			- Add all modified files to the staging area
+git log 			- Check all commits
+git commit -m "<message>"	- Commit changes
+git branch <name-ng-branch>     - Create a new branch with the name <name-ng-branch>
+git checkout <branch-name>      - Change currect branch
+git remote add <name> <url>     - Create a remote repository with the name <name> with the value <url>
+git remote -v			- Check all available remote repositories
+git push <server> <branch>
+git pull <remote> <branch>
