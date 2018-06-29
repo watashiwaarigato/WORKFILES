@@ -1,0 +1,78 @@
+/* common
+------------------------------------*/
+html,
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+	font-size: 12px;
+	color: #000;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+.wrap {
+	position: fixed;
+	width: 30%;
+	height: 30%;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+.container {
+	position: relative;
+	width: 400%;
+	height: 400%;
+	margin: 0 auto;
+	background: url(../images/temp.gif);
+	overflow: hidden;
+}
+.wrap section {
+	float: left;
+	width: 25%;
+	height: 25%;
+}
+.wrap section.section-01 {
+	background-color: rgba(0,0,0,0.3);
+}
+.wrap section.section-02 {
+	background-color: rgba(222, 65, 65, 0.3);
+}
+.wrap section.section-03 {
+	background-color: rgba(243, 142, 255, 0.3);
+}
+.wrap section.section-04 {
+	background-color: rgba(38, 130, 37, 0.3)
+}
+
+.wrap section.section-08 {
+	background-color: rgba(0,0,0,0.3);
+}
+.wrap section.section-07 {
+	background-color: rgba(222, 65, 65, 0.3);
+}
+.wrap section.section-06 {
+	background-color: rgba(243, 142, 255, 0.3);
+}
+.wrap section.section-05 {
+	background-color: rgba(38, 130, 37, 0.3)
+}
+
+.wrap section.section-09 {
+	background-color: rgba(0,0,0,0.3);
+}
+.wrap section.section-10 {
+	background-color: rgba(222, 65, 65, 0.3);
+}
+.wrap section.section-11 {
+	background-color: rgba(243, 142, 255, 0.3);
+}
+.wrap section.section-12 {
+	background-color: rgba(38, 130, 37, 0.3)
+}

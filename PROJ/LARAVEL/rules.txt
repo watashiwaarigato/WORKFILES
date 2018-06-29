@@ -1,0 +1,159 @@
+conditions (if, for, while, ect)
+group
+get
+post
+resource
+middleware
+controller
+put
+patch
+
+
+
+--------------------------------------------
+<!--FORM INSTALL-->
+composer require laravelcollective/html <!--cmd in users dir-->
+
+or
+
+composer create-project laravel/laravel test-laravel-5-project --prefer-dist
+
+
+--------------------------------------------
+<!--RUN PROJECT-->
+php artisan serve
+--------------------------------------------
+<!--NAME THE APP-->
+(Renaming your application is entirely optional, and you are free to keep the App namespace if you wish)
+php artisan app:name Horsefly\
+--------------------------------------------
+<!--ROUTE LIST-->
+php artisan route:list
+
+
+--------------------------------------------
+<!--CREATE CONTROLLER-->
+php artisan make:controller [Name]
+php artisan make:controller [Folder]/[Name]
+--------------------------------------------
+<!--CREATE MODEL-->
+php artisan make:model Http/Model/[model_name]
+
+
+
+--------------------------------------------
+<!--CREATE MIDDLEWARE-->
+php artisan make:middleware [Name]
+
+<!--SETUP MIDDLEWARE to Kernel.php-->
+protected $middlewareGroups = [
+'web' => [
+\Plara\Http\Middleware\EncryptCookies::class,
+\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+\Illuminate\Session\Middleware\StartSession::class,
+\Illuminate\View\Middleware\ShareErrorsFromSession::class,
+\Plara\Http\Middleware\VerifyCsrfToken::class,	
+],
+
+'api' => [
+'throttle:60,1',
+],
+
+'sessionAuth' => [
+\App\Http\Middleware\sessionMiddleware::class,
+],
+];
+
+
+<!--SETUP MIDDLEWARE to route.php-->
+Route::group(['middleware' => ['sessionAuth']], function () {
+//route here
+});
+
+
+
+
+--------------------------------------------
+<!--SET UP DATABASE-->
+folder location: /config/database.php
+--------------------------------------------
+<!--CREATE MIGRATION-->
+php artisan make:migration create_users_table
+--------------------------------------------
+<!--CREATE TABLE FROM MIGRATION-->
+php artisan migrate --force
+--------------------------------------------
+<!--DROP TABLE FROM MIGRATION-->
+php artisan migrate:rollback
+--------------------------------------------
+<!--DROP TABLE AND CREATE FROM MIGRATION-->
+php artisan migrate:refresh
+--------------------------------------------
+
+
+--------------------------------------------
+<!--Put your css and js in the public folder-->
+{{ HTML::script('js/scrollTo.js'); }}
+{{ HTML::style('css/css.css'); }}
+
+
+ROUTE
+Route::get('hello', 'TestController@index');
+Route::get('/hello/{name}', 'TestController@show');
+
+CONTROLLER
+{
+public function index()
+{
+return 'hello world from controller : )';
+}
+public function show($name) {
+return View::make('hello',compact('name'));
+}
+}
+
+
+
+
+--------------------------------------------
+<!--Using Model declare table in Model-->
+class employeeModel extends Model
+{
+protected $table = 'employee_info';
+}
+
+<!--Using Model in Controller-->
+SELECT * FROM table
+$employees = employeeModel::all();
+
+SELECT * FROM table WHERE active = 1 ORDER BY (name, desc) LIMIT 10
+$employees = employeeModel::where('active', 1)->orderBy('name', 'desc')->take(10)->get();
+
+SELECT * FROM table WHERE active = 1 LIMIT 1
+$employees = employeeModel::where('active', 1)->first();
+
+SELECT * FROM table WHERE legs > 100
+$employees = employeeModel::where('legs', '>', 100)->firstOrFail();
+
+mysql_num_rows
+$count = App\Flight::where('active', 1)->count();
+
+SELECT max(price)
+$max = App\Flight::where('active', 1)->max('price');
+
+DELETE just add ->delete();
+deckModel::where('user_id', $user_id)->where('deck_name', $deck_name)->delete();
+
+
+
+
+
+--------------------------------------------
+<!--DROP TABLE AND CREATE FROM MIGRATION-->
+php artisan make:middleware [Name]
+*note:
+for group route middleware, update your app/http
+add the path of your new middleware to the "$middlewareGroups"
+--------------------------------------------
+
+

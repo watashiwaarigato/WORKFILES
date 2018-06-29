@@ -1,0 +1,65 @@
+body {
+	color: #666;
+}
+.wrap {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.cover {
+	height: 230px;
+	background: #f4f4f4;
+}
+.info {
+	border-top: 1px solid #ececec;
+}
+.char {
+	height: 162px;
+}
+.avatar {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	padding: 6px 0 0 6px;
+	margin: -50px auto;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #ccc;
+	background: #fff;
+}
+.avatar .img {
+	width: 138px;
+	height: 138px;
+	background: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.avatar .img img {
+	width: 100%;
+	height: auto;
+}
+.avatar:hover .btn {
+	display: block;
+}
+.avatar .btn {
+	display: none;
+	position: absolute;
+	top: 113px;
+	left: 77px;
+	font-size: 90%;
+	color: #fff;
+	background: #fff;
+}
+.avatar .btn a {
+	text-decoration: none;
+}
+.info .cname {
+	text-align: center;
+	font-size: 120%;
+}
+.info .cname span {
+	font-size: 70%;
+	color: #999;
+}
+.info .cname span {
+
+}

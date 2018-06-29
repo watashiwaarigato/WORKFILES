@@ -1,0 +1,126 @@
+/* common
+------------------------------------*/
+html,
+body {
+	min-width: 960px;
+	min-height: 640px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+	color: #e50065;
+}
+p {
+	line-height: 1.5;
+}
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+.wrap {
+	width: 850px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
+ul li:hover {
+	box-shadow: 0px 0px 5px #888888;
+	cursor: pointer;
+}
+
+
+.container {
+	display: table;
+	width: 100%;
+}
+.container .deck {
+	display: table-cell;
+	vertical-align: top;
+	width: 620px;
+}
+
+.deck ul {
+	overflow: hidden;
+}
+.deck ul li {
+	position: relative;
+	float: left;
+	width: 60px;
+	height: 90px;
+	border: 1px solid #ccc;
+}
+.deck ul li img {
+	width: 100%;
+}
+
+.container .side {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.card_information01 {
+	width: 200px;
+	height: 290px;
+	margin-left: 15px;
+	border: 1px solid #ccc;
+}
+.card_information01 img {
+	width: 100%;
+}
+.card_information02 {
+	width: 200px;
+	height: 150px;
+	margin: 7px 0 0 15px;
+	border: 1px solid #ccc;
+}
+.card_information02 .description {
+	height: 100px;
+	padding: 5px;
+	font-size: 10px;
+	overflow-y: auto;
+	border-bottom: 1px solid #ccc;
+}
+.card_information02 .description .level img {
+	height: 12px;
+	margin-right: 3px;
+}
+.card_information02 .description .type img {
+	height: 15px;
+}
+.card_information02 .pow {
+	padding: 3px 0 0 8px;
+	font-size: 12px;
+}
+
+
+.card-list {
+	height: 165px;
+	margin-top: 10px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+.card-list ul {
+	white-space: nowrap;
+}
+.card-list ul li {
+	display: inline-block;
+	width: 90px;
+	margin-right: 5px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.card-list ul li img {
+	width: 100%;
+}
+
+.btn {
+	margin-top: 20px;
+	text-align: center;
+}
+.btn input[type="button"] {
+	padding: 5px 20px 5px 20px;
+	cursor: pointer;
+}

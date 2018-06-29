@@ -1,0 +1,205 @@
+/* common
+------------------------------------*/
+html,
+body {
+	min-width: 960px;
+	min-height: 640px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: 'Century Gothic';
+}
+p {
+	line-height: 1.5;
+}
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+.wrap {
+	min-width: 850px;
+	width: 850px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+
+header {
+	height: 140px;
+	margin-bottom: 16px;
+}
+main section {
+	height: 90px;
+	margin-bottom: 10px;
+}
+main .enemy {
+	margin-bottom: 40px;
+}
+footer {
+	height: 140px;
+	margin-top: 16px;
+}
+
+
+ul {
+	margin: 0 auto;
+	text-align: center;
+}
+ul li {
+	background: #fff;
+}
+ul li:hover {
+	box-shadow: 0px 0px 5px #888888;
+	cursor: pointer;
+}
+header ul li,
+footer ul li {
+	display: inline-block;
+	width: 90px;
+	height: 140px;
+	margin: 0 4px 0 4px;
+	border: 1px solid #ccc;
+}
+main section ul li {
+	display: inline-block;
+	width: 60px;
+	height: 90px;
+	margin: 0 14px 0 14px;
+	border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+/* MODAL */
+.modal {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.3);
+	z-index: 99;
+}
+.modal ul {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 400px;
+	height: 200px;
+	background: #fff;
+}
+#narator p {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 400px;
+	height: 80px;
+	text-align: center;
+	font-size: 400%;
+	color: #fff;
+}
+
+#shuffle div {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 400px;
+	height: 230px;
+	text-align: center;
+}
+#shuffle div p:first-child {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 20px;
+}
+#shuffle div p:first-child img {
+	margin: -70px 0 0 -80px;
+}
+#shuffle div p:last-child {
+	color: #fff;
+	font-size: 170%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CARDS TEMPLATE*/
+.deck {
+	margin-left: 25px;
+	background: #E4BA97 url("../images/card_deck.gif") no-repeat center;
+}
+.graveyard {
+	margin-left: 25px;
+	background: #ccc url("../images/card_graveyard.gif") no-repeat center;
+}
+.graveyard .card_bg {
+	position: relative;
+	width: 58px;
+	height: 88px;
+	background: #ccc url("../images/card_graveyard.gif") no-repeat center;
+	border: 1px solid #8E8E8E;
+}
+.fieldcard {
+	margin-right: 25px;
+	background: #C2EABF url("../images/fieldcard_bg.png") no-repeat center;
+}
+.fussion {
+	margin-right: 25px;
+	background: #ECC4F1;
+}
+
+.card_bg,
+.card_monster,
+.card_magic {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #8E8E8E;
+}
+.card_bg {
+	bottom: 0;
+	background: #E4BA97 url("../images/card_deck.gif") no-repeat center;
+}
+.card_monster {
+	background: #E4BA97 url("../images/card_monster.gif") no-repeat center;
+}
+.card_magic {
+	background: #E4BA97 url("../images/card_magic.gif") no-repeat center;
+}
+
+.char ul li>div {
+	bottom: -350px;
+}
+.enemy ul li>div {
+	bottom: 350px;
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
