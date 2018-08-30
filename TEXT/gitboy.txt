@@ -2,6 +2,10 @@ https://tci-dm.backlog.jp
 IDÅFkevin-ralph.iglesias
 PWÅFpassword123!
 
+watashiwaarigato@gmail.com
+emocore618
+
+
 CONFIGURATION
 git config --global user.name ""
 git config --global user.email ""
@@ -18,7 +22,12 @@ git add .
 git status
 git commit -m ""
 git log
-$ git push
+$ git push / $ git push origin master / $ git push --set-upstream origin master
+
+
+RESET IF NOT CLONED
+git fetch origin master
+git reset --hard FETCH_HEAD
 
 
 CHANGE/MOVE FILES
